@@ -20,3 +20,6 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 # Ferramenta para utilização das migrations
 dotnet tool install --global dotnet-ef
+
+# Como criar uma migration
+dotnet ef migrations add CreateProduct
