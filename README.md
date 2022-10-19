@@ -1,4 +1,5 @@
-# api
+# Products
+
 # Instalação do docker
 https://www.docker.com/
 
@@ -16,3 +17,6 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=@Sql2019" -p 1433:1433 --nam
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+# Ferramenta para utilização das migrations
+dotnet tool install --global dotnet-ef
