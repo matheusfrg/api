@@ -1,5 +1,3 @@
-# Products
-
 # Instalação do docker
 https://www.docker.com/
 
@@ -13,16 +11,23 @@ docker pull mcr.microsoft.com/mssql/server:2019-latest
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=@Sql2019" -p 1433:1433 --name sqlserver --hostname sql1 -d mcr.microsoft.com/mssql/server:2019-latest
 
 # Pacotes Nuggets para utilização do EntityFramework
-
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
-# Ferramenta para utilização das migrations
+# Ferramenta para atualização de pacotes do nugget
+dotnet tool install --global dotnet-outdated-tool
+
+# Comando para atualizar os pacotes
+dotnet outdated --upgrade
+
+# Migrations
+# Instalção da ferramenta para utilização
 dotnet tool install --global dotnet-ef
 
-# Como criar uma migration
+# Adicionar
 dotnet ef migrations add CreateProduct
 
-# Aplicando a migration
+# Persistir no banco de dados
 dotnet ef database update
+
