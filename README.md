@@ -23,3 +23,6 @@ dotnet tool install --global dotnet-ef
 
 # Como criar uma migration
 dotnet ef migrations add CreateProduct
+
+# Aplicando a migration
+dotnet ef database update
